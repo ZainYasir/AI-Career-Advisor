@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which subjects do you enjoy the most?",
+      "options": [
+        { "text": "Math & Computers", "career_tag": "tech" },
+        { "text": "Biology & Chemistry", "career_tag": "medical" },
+        { "text": "Business & Economics", "career_tag": "business" },
+        { "text": "Arts & Social Studies", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What kind of work do you prefer?",
+      "options": [
+        { "text": "Problem-solving and coding", "career_tag": "tech" },
+        { "text": "Helping and treating people", "career_tag": "medical" },
+        { "text": "Managing, planning, and leading", "career_tag": "business" },
+        { "text": "Creative and expressive work", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is your strongest skill?",
+      "options": [
+        { "text": "Logical thinking", "career_tag": "tech" },
+        { "text": "Empathy and patience", "career_tag": "medical" },
+        { "text": "Communication and leadership", "career_tag": "business" },
+        { "text": "Creativity", "career_tag": "arts" }
+      ]
+    }
+  ]
+}

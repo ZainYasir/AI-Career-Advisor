@@ -1,0 +1,42 @@
+{
+  "tech": {
+    "career": "Software Engineer / Computer Scientist",
+    "degrees": ["BS Computer Science", "BS Software Engineering"],
+    "universities": [
+      "FAST-NUCES",
+      "NUST",
+      "COMSATS",
+      "PUCIT",
+      "GIKI"
+    ]
+  },
+  "medical": {
+    "career": "Doctor",
+    "degrees": ["MBBS", "BDS"],
+    "universities": [
+      "King Edward Medical University",
+      "Dow University of Health Sciences",
+      "Aga Khan University",
+      "Allama Iqbal Medical College"
+    ]
+  },
+  "business": {
+    "career": "Business Professional",
+    "degrees": ["BBA", "BS Accounting & Finance"],
+    "universities": [
+      "IBA Karachi",
+      "LUMS",
+      "SZABIST",
+      "Bahria University"
+    ]
+  },
+  "arts": {
+    "career": "Creative / Social Sciences",
+    "degrees": ["BS Psychology", "BS Media Studies"],
+    "universities": [
+      "Beaconhouse National University",
+      "University of Karachi",
+      "Punjab University"
+    ]
+  }
+}
