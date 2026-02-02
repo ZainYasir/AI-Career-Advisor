@@ -13,18 +13,21 @@ const RecommendationPage = () => {
     fetchRecommendations();
   }, []);
 
-const fetchRecommendations = async () => {
-  try {
-    setLoading(true);
-    const data = await recommendationAPI.getRecommendations(); // no params
-    setRecommendation(data);
-  } catch (err) {
-    setError('Failed to load recommendations. Please make sure you have completed the quiz.');
-  } finally {
-    setLoading(false);
-  }
-};
-
+  const fetchRecommendations = async () => {
+    try {
+      setLoading(true);
+      // Call GET /api/recommendations, backend handles ML & result.json
+      const data = await recommendationAPI.getRecommendations();
+      setRecommendation(data);
+    } catch (err) {
+      console.error('Recommendation API error:', err);
+      setError(
+        'Failed to load recommendations. Please make sure you have completed the quiz.'
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -86,6 +89,7 @@ const fetchRecommendations = async () => {
       </nav>
 
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+        {/* Career Card */}
         <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-lg shadow-lg p-8 text-white">
           <div className="flex items-center mb-4">
             <Award className="w-12 h-12 mr-3" />
@@ -101,13 +105,14 @@ const fetchRecommendations = async () => {
                 <div
                   className="bg-white h-3 rounded-full transition-all"
                   style={{ width: `${recommendation.confidence * 100}%` }}
-                ></div>
+                />
               </div>
               <span className="text-xl font-bold">{Math.round(recommendation.confidence * 100)}%</span>
             </div>
           </div>
         </div>
 
+        {/* Explanation */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="flex items-center mb-4">
             <Lightbulb className="w-8 h-8 text-yellow-500 mr-3" />
@@ -116,6 +121,7 @@ const fetchRecommendations = async () => {
           <p className="text-gray-700 leading-relaxed">{recommendation.explanation}</p>
         </div>
 
+        {/* Degree Programs */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="flex items-center mb-4">
             <BookOpen className="w-8 h-8 text-blue-600 mr-3" />
@@ -136,6 +142,7 @@ const fetchRecommendations = async () => {
           </ul>
         </div>
 
+        {/* Universities */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="flex items-center mb-4">
             <Building2 className="w-8 h-8 text-green-600 mr-3" />
@@ -159,6 +166,7 @@ const fetchRecommendations = async () => {
           </ul>
         </div>
 
+        {/* Retake Quiz */}
         <div className="bg-white rounded-lg shadow-lg p-6">
           <p className="text-center text-gray-600">
             Want to explore other career options?{' '}

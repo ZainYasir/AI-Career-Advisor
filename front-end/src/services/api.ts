@@ -97,7 +97,7 @@ export const quizAPI = {
 
 export const recommendationAPI = {
   getRecommendations: async (): Promise<Recommendation> => {
-    const response = await api.get<Recommendation>('/api/recommendations/');
+    const response = await api.get<Recommendation>('/api/recommendations');
     return response.data;
   },
 };
