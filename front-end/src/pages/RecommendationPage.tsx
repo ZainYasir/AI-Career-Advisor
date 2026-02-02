@@ -13,17 +13,18 @@ const RecommendationPage = () => {
     fetchRecommendations();
   }, []);
 
-  const fetchRecommendations = async () => {
-    try {
-      setLoading(true);
-      const data = await recommendationAPI.getRecommendations();
-      setRecommendation(data);
-    } catch (err) {
-      setError('Failed to load recommendations. Please make sure you have completed the quiz.');
-    } finally {
-      setLoading(false);
-    }
-  };
+const fetchRecommendations = async () => {
+  try {
+    setLoading(true);
+    const data = await recommendationAPI.getRecommendations(); // no params
+    setRecommendation(data);
+  } catch (err) {
+    setError('Failed to load recommendations. Please make sure you have completed the quiz.');
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   if (loading) {
     return (

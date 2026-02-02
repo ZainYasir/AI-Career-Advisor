@@ -29,6 +29,126 @@
         { "text": "Communication and leadership", "career_tag": "business" },
         { "text": "Creativity", "career_tag": "arts" }
       ]
+    },
+    {
+      "id": 4,
+      "question": "What were your matriculation marks?",
+      "options": [
+        { "text": "Above 90%", "career_tag": "high_achiever" },
+        { "text": "80-89%", "career_tag": "achiever" },
+        { "text": "70-79%", "career_tag": "average" },
+        { "text": "Below 70%", "career_tag": "needs_guidance" }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What were your intermediate marks?",
+      "options": [
+        { "text": "Above 90%", "career_tag": "high_achiever" },
+        { "text": "80-89%", "career_tag": "achiever" },
+        { "text": "70-79%", "career_tag": "average" },
+        { "text": "Below 70%", "career_tag": "needs_guidance" }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Which type of subjects do you prefer?",
+      "options": [
+        { "text": "Mathematics and Engineering subjects", "career_tag": "tech" },
+        { "text": "Biology and Health sciences", "career_tag": "medical" },
+        { "text": "Economics, Accounting, and Management", "career_tag": "business" },
+        { "text": "Literature, History, and Arts", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "When solving a problem, you mostly:",
+      "options": [
+        { "text": "Analyze data and find patterns", "career_tag": "tech" },
+        { "text": "Consider people's needs and impact", "career_tag": "medical" },
+        { "text": "Look for strategic and efficient solutions", "career_tag": "business" },
+        { "text": "Think outside the box creatively", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Which activity do you enjoy the most?",
+      "options": [
+        { "text": "Programming or building gadgets", "career_tag": "tech" },
+        { "text": "Volunteering or caring for others", "career_tag": "medical" },
+        { "text": "Running projects or leading teams", "career_tag": "business" },
+        { "text": "Painting, writing, or performing arts", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Logical puzzle: If all cats are animals, and some animals are playful, which is true?",
+      "options": [
+        { "text": "All cats are playful", "career_tag": "arts" },
+        { "text": "Some cats might be playful", "career_tag": "tech" },
+        { "text": "No cats are playful", "career_tag": "medical" },
+        { "text": "Cannot determine", "career_tag": "business" }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Math puzzle: If 3x + 5 = 20, what is x?",
+      "options": [
+        { "text": "5", "career_tag": "tech" },
+        { "text": "10", "career_tag": "business" },
+        { "text": "15", "career_tag": "medical" },
+        { "text": "Cannot solve", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "Which environment do you prefer for studying?",
+      "options": [
+        { "text": "Laboratory or computer lab", "career_tag": "tech" },
+        { "text": "Hospital or healthcare setting", "career_tag": "medical" },
+        { "text": "Office or corporate setting", "career_tag": "business" },
+        { "text": "Studio or creative space", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Do you enjoy working under strict rules or more flexibility?",
+      "options": [
+        { "text": "Strict rules with defined methods", "career_tag": "tech" },
+        { "text": "Flexible with patient care decisions", "career_tag": "medical" },
+        { "text": "Flexible but target-driven", "career_tag": "business" },
+        { "text": "Flexible with creative freedom", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 13,
+      "question": "How do you handle unexpected challenges?",
+      "options": [
+        { "text": "Analyze and troubleshoot logically", "career_tag": "tech" },
+        { "text": "Assess and care for those affected", "career_tag": "medical" },
+        { "text": "Plan strategically to overcome", "career_tag": "business" },
+        { "text": "Think creatively for new solutions", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Which type of project excites you most?",
+      "options": [
+        { "text": "Developing software or robots", "career_tag": "tech" },
+        { "text": "Medical research or patient care", "career_tag": "medical" },
+        { "text": "Starting a business or managing teams", "career_tag": "business" },
+        { "text": "Creating art, music, or literature", "career_tag": "arts" }
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Do you enjoy analyzing patterns and numbers?",
+      "options": [
+        { "text": "Yes, very much", "career_tag": "tech" },
+        { "text": "Yes, if related to health or biology", "career_tag": "medical" },
+        { "text": "Yes, for business or finance", "career_tag": "business" },
+        { "text": "No, prefer creative expression", "career_tag": "arts" }
+      ]
     }
   ]
 }

@@ -4,5 +4,11 @@
     "name": null,
     "email": "test@test.com",
     "password": "$2b$12$bcw8H7jSxSRD4KWyrGEJyeShc6gHmkiKt8deM.sNLzvmhI8v0TKGG"
+  },
+  {
+    "id": "52474898-c6b2-4407-8dcb-73ba87227d75",
+    "name": null,
+    "email": "test2@test.com",
+    "password": "$2b$12$eeyRmETU/SApGKNtF4KvzOdUU3LZDE8EBFgq0DFiX94vW0T47ZsgG"
   }
 ]

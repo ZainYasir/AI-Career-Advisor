@@ -59,9 +59,9 @@ export interface QuizSubmission {
 /* ===================== RECOMMENDATION ===================== */
 
 export interface Recommendation {
-  recommended_career: string;
-  confidence_score: number;
-  degrees: string[];
+  career: string;
+  confidence: number;
+  degree_programs: string[];
   universities: string[];
   explanation: string;
 }
@@ -97,7 +97,7 @@ export const quizAPI = {
 
 export const recommendationAPI = {
   getRecommendations: async (): Promise<Recommendation> => {
-    const response = await api.get<Recommendation>('/api/recommendations');
+    const response = await api.get<Recommendation>('/api/recommendations/');
     return response.data;
   },
 };

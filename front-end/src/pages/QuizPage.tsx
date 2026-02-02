@@ -57,7 +57,9 @@ const QuizPage = () => {
         })
       );
 
-      await quizAPI.submitQuiz({ answers: formattedAnswers });
+      const result = await quizAPI.submitQuiz({ answers: formattedAnswers });
+      // SAVE RESULT FOR NEXT PAGE
+      localStorage.setItem("quiz_result", JSON.stringify(result));
       navigate('/recommendations');
     } catch {
       setError('Failed to submit quiz.');

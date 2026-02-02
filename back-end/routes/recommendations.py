@@ -1,29 +1,29 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 import json
 from pathlib import Path
 
 router = APIRouter()
 
 UNIVERSITY_FILE = Path("data/universities.json")
+RESULT_FILE = Path("data/result.json")
 
-@router.post("/")
-def get_recommendation(result: dict):
-    """
-    result = {
-        "career_tag": "tech",
-        "confidence": 66.7
-    }
-    """
+@router.get("/")
+def get_recommendation():
+    if not RESULT_FILE.exists():
+        raise HTTPException(status_code=400, detail="Quiz not completed")
+
+    with open(RESULT_FILE, "r") as f:
+        result = json.load(f)
 
     with open(UNIVERSITY_FILE, "r") as f:
-        data = json.load(f)
+        universities = json.load(f)
 
-    career_data = data.get(result["career_tag"])
+    career_data = universities.get(result["career_tag"])
 
     return {
-        "recommended_career": career_data["career"],
-        "confidence_score": result["confidence"],
-        "degrees": career_data["degrees"],
+        "career": career_data["career"],
+        "confidence": result["confidence"],
+        "degree_programs": career_data["degrees"],
         "universities": career_data["universities"],
-        "explanation": f"Based on your interests and strengths, you are well-suited for a career in {career_data['career']}."
+        "explanation": f"Based on your academic background and aptitude, {career_data['career']} is a strong match for you."
     }

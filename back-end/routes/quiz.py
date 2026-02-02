@@ -5,28 +5,41 @@ from pathlib import Path
 router = APIRouter()
 
 QUIZ_FILE = Path("data/quiz.json")
+RESULT_FILE = Path("data/result.json")
 
 @router.get("/questions")
 def get_quiz_questions():
     with open(QUIZ_FILE, "r") as f:
-        data = json.load(f)
-    return data["questions"]
+        return json.load(f)["questions"]
 
 
 @router.post("/submit")
-def submit_quiz(answers: list):
+def submit_quiz(payload: dict):
     """
-    answers = ["tech", "tech", "business"]
+    payload = {
+        "answers": [
+            {"question_id": 1, "answer": "tech"},
+            {"question_id": 2, "answer": "tech"}
+        ]
+    }
     """
-    score = {}
+    answers = payload["answers"]
 
-    for tag in answers:
+    score = {}
+    for item in answers:
+        tag = item["answer"]
         score[tag] = score.get(tag, 0) + 1
 
-    recommended_career = max(score, key=score.get)
-    confidence = round((score[recommended_career] / len(answers)) * 100, 2)
+    recommended = max(score, key=score.get)
+    confidence = round(score[recommended] / len(answers), 2)
 
-    return {
-        "career_tag": recommended_career,
+    result = {
+        "career_tag": recommended,
         "confidence": confidence
     }
+
+    # 🔴 SAVE RESULT FOR RECOMMENDATION PAGE
+    with open(RESULT_FILE, "w") as f:
+        json.dump(result, f)
+
+    return {"message": "Quiz submitted successfully"}
