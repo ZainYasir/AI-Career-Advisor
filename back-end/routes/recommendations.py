@@ -1,75 +1,75 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 import json
 from pathlib import Path
 import joblib
+import importlib.util
+import sys
 
 router = APIRouter()
 
-# Resolve paths relative to project root (backend/)
+# Base directory of your backend
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# File paths
 UNIVERSITY_FILE = BASE_DIR / "data" / "universities.json"
 RESULT_FILE = BASE_DIR / "data" / "result.json"
 MODEL_FILE = BASE_DIR / "ml" / "model.pkl"
+NLP_FILE = BASE_DIR / "ml" / "nlp.py"
 
-# Load universities data once
-if not UNIVERSITY_FILE.exists():
-    raise RuntimeError(f"Universities file not found at {UNIVERSITY_FILE}")
+# ================= Load NLP module dynamically =================
+spec = importlib.util.spec_from_file_location("nlp", NLP_FILE)
+nlp = importlib.util.module_from_spec(spec)
+sys.modules["nlp"] = nlp
+spec.loader.exec_module(nlp)
+# ================================================================
+
+# Load JSON data
 with open(UNIVERSITY_FILE, "r") as f:
     universities = json.load(f)
 
 # Load ML model
-if MODEL_FILE.exists():
-    model = joblib.load(MODEL_FILE)
-    print(f"[INFO] ML model loaded from {MODEL_FILE}")
-else:
-    model = None
-    print(f"[WARNING] ML model not found. Falling back to result.json for recommendations.")
+model = joblib.load(MODEL_FILE) if MODEL_FILE.exists() else None
 
 @router.get("/")
-def get_recommendation():
-    """
-    Returns career recommendation.
-    If ML model exists, can use it to predict.
-    Else fallback to last quiz result in result.json.
-    """
+def get_recommendation(language: str = Query("en")):
+    if not RESULT_FILE.exists():
+        raise HTTPException(status_code=400, detail="Quiz not completed")
 
-    # If ML model exists, you can implement real prediction logic here.
-    if model:
-        # For demonstration, let's just read result.json as proxy
-        if not RESULT_FILE.exists():
-            raise HTTPException(status_code=400, detail="Quiz not completed")
-        with open(RESULT_FILE, "r") as f:
-            result = json.load(f)
+    with open(RESULT_FILE, "r") as f:
+        result = json.load(f)
 
-        career_tag = result.get("career_tag")
-        confidence = result.get("confidence", 0.5)
-
-        # Here you could implement actual model.predict(...)
-        # Example:
-        # input_features = [...]  # prepare features from quiz answers
-        # pred = model.predict([input_features])
-        # career_tag = map_prediction_to_tag(pred)
-        # confidence = model.predict_proba([input_features])[0].max()
-
-    else:
-        # No model, fallback
-        if not RESULT_FILE.exists():
-            raise HTTPException(status_code=400, detail="Quiz not completed and no ML model available")
-        with open(RESULT_FILE, "r") as f:
-            result = json.load(f)
-        career_tag = result.get("career_tag")
-        confidence = result.get("confidence", 0.5)
-        print("[INFO] Using proxy recommendation from result.json")
+    career_tag = result.get("career_tag")
+    confidence = result.get("confidence", 0.5)
 
     career_data = universities.get(career_tag)
     if not career_data:
-        raise HTTPException(status_code=404, detail=f"No career data found for tag '{career_tag}'")
+        raise HTTPException(status_code=404, detail="Invalid career tag")
+
+    # ================= NLP Integration =================
+    nlp_insight = nlp.get_career_insight(career_tag, language)
+    # Only use the plain, user-facing text
+    nlp_text = nlp_insight["text"]
+    # ====================================================
+
+    # Language-specific explanation
+    if language == "ur":
+        explanation = (
+            f"آپ کی تعلیمی کارکردگی اور صلاحیت کی بنیاد پر، "
+            f"{career_data['career']} آپ کے لیے ایک موزوں شعبہ ہے۔"
+        )
+    else:
+        explanation = (
+            f"Based on your academic background and aptitude, "
+            f"{career_data['career']} is a strong match for you."
+        )
+
+    # Combine explanation + NLP plain text
+    full_explanation = f"{explanation}\n\n{nlp_text}"
 
     return {
         "career": career_data["career"],
         "confidence": confidence,
         "degree_programs": career_data["degrees"],
         "universities": career_data["universities"],
-        "explanation": f"Based on your academic background and aptitude, {career_data['career']} is a strong match for you."
+        "explanation": full_explanation
     }

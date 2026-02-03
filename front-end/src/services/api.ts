@@ -52,8 +52,10 @@ export interface QuizAnswer {
   answer: string;
 }
 
-export interface QuizSubmission {
+// Updated submission type to include language
+export interface QuizSubmissionRequest {
   answers: QuizAnswer[];
+  language?: 'en' | 'ur';
 }
 
 /* ===================== RECOMMENDATION ===================== */
@@ -86,7 +88,7 @@ export const quizAPI = {
     return response.data;
   },
 
-  submitQuiz: async (data: QuizSubmission): Promise<{ message: string }> => {
+  submitQuiz: async (data: QuizSubmissionRequest): Promise<{ message: string }> => {
     const response = await api.post<{ message: string }>(
       '/api/quiz/submit',
       data
@@ -96,8 +98,10 @@ export const quizAPI = {
 };
 
 export const recommendationAPI = {
-  getRecommendations: async (): Promise<Recommendation> => {
-    const response = await api.get<Recommendation>('/api/recommendations');
+  getRecommendations: async (language: 'en' | 'ur'): Promise<Recommendation> => {
+    const response = await api.get<Recommendation>(
+      `/api/recommendations?language=${language}`
+    );
     return response.data;
   },
 };

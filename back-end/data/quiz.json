@@ -2,152 +2,197 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which subjects do you enjoy the most?",
+      "question": {
+        "en": "Which subjects do you enjoy the most?",
+        "ur": "آپ کو سب سے زیادہ کون سے مضامین پسند ہیں؟"
+      },
       "options": [
-        { "text": "Math & Computers", "career_tag": "tech" },
-        { "text": "Biology & Chemistry", "career_tag": "medical" },
-        { "text": "Business & Economics", "career_tag": "business" },
-        { "text": "Arts & Social Studies", "career_tag": "arts" }
+        { "text": { "en": "Math & Computers", "ur": "ریاضی اور کمپیوٹر" }, "career_tag": "tech" },
+        { "text": { "en": "Biology & Chemistry", "ur": "حیاتیات اور کیمیا" }, "career_tag": "medical" },
+        { "text": { "en": "Business & Economics", "ur": "کاروبار اور معاشیات" }, "career_tag": "business" },
+        { "text": { "en": "Arts & Social Studies", "ur": "فنون اور سماجی علوم" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 2,
-      "question": "What kind of work do you prefer?",
+      "question": {
+        "en": "What kind of work do you prefer?",
+        "ur": "آپ کس قسم کا کام پسند کرتے ہیں؟"
+      },
       "options": [
-        { "text": "Problem-solving and coding", "career_tag": "tech" },
-        { "text": "Helping and treating people", "career_tag": "medical" },
-        { "text": "Managing, planning, and leading", "career_tag": "business" },
-        { "text": "Creative and expressive work", "career_tag": "arts" }
+        { "text": { "en": "Problem-solving and coding", "ur": "مسئلہ حل کرنا اور کوڈنگ" }, "career_tag": "tech" },
+        { "text": { "en": "Helping and treating people", "ur": "لوگوں کی مدد اور علاج کرنا" }, "career_tag": "medical" },
+        { "text": { "en": "Managing, planning, and leading", "ur": "انتظام، منصوبہ بندی اور قیادت" }, "career_tag": "business" },
+        { "text": { "en": "Creative and expressive work", "ur": "تخلیقی اور اظہار پر مبنی کام" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 3,
-      "question": "What is your strongest skill?",
+      "question": {
+        "en": "What is your strongest skill?",
+        "ur": "آپ کی سب سے مضبوط مہارت کیا ہے؟"
+      },
       "options": [
-        { "text": "Logical thinking", "career_tag": "tech" },
-        { "text": "Empathy and patience", "career_tag": "medical" },
-        { "text": "Communication and leadership", "career_tag": "business" },
-        { "text": "Creativity", "career_tag": "arts" }
+        { "text": { "en": "Logical thinking", "ur": "منطقی سوچ" }, "career_tag": "tech" },
+        { "text": { "en": "Empathy and patience", "ur": "ہمدردی اور صبر" }, "career_tag": "medical" },
+        { "text": { "en": "Communication and leadership", "ur": "رابطہ اور قیادت" }, "career_tag": "business" },
+        { "text": { "en": "Creativity", "ur": "تخلیقی صلاحیت" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 4,
-      "question": "What were your matriculation marks?",
+      "question": {
+        "en": "What were your matriculation marks?",
+        "ur": "آپ کے میٹرک کے نمبر کیا تھے؟"
+      },
       "options": [
-        { "text": "Above 90%", "career_tag": "high_achiever" },
-        { "text": "80-89%", "career_tag": "achiever" },
-        { "text": "70-79%", "career_tag": "average" },
-        { "text": "Below 70%", "career_tag": "needs_guidance" }
+        { "text": { "en": "Above 90%", "ur": "۹۰٪ سے زیادہ" }, "career_tag": "high_achiever" },
+        { "text": { "en": "80-89%", "ur": "۸۰-۸۹٪" }, "career_tag": "achiever" },
+        { "text": { "en": "70-79%", "ur": "۷۰-۷۹٪" }, "career_tag": "average" },
+        { "text": { "en": "Below 70%", "ur": "۷۰٪ سے کم" }, "career_tag": "needs_guidance" }
       ]
     },
     {
       "id": 5,
-      "question": "What were your intermediate marks?",
+      "question": {
+        "en": "What were your intermediate marks?",
+        "ur": "آپ کے انٹرمیڈیٹ کے نمبر کیا تھے؟"
+      },
       "options": [
-        { "text": "Above 90%", "career_tag": "high_achiever" },
-        { "text": "80-89%", "career_tag": "achiever" },
-        { "text": "70-79%", "career_tag": "average" },
-        { "text": "Below 70%", "career_tag": "needs_guidance" }
+        { "text": { "en": "Above 90%", "ur": "۹۰٪ سے زیادہ" }, "career_tag": "high_achiever" },
+        { "text": { "en": "80-89%", "ur": "۸۰-۸۹٪" }, "career_tag": "achiever" },
+        { "text": { "en": "70-79%", "ur": "۷۰-۷۹٪" }, "career_tag": "average" },
+        { "text": { "en": "Below 70%", "ur": "۷۰٪ سے کم" }, "career_tag": "needs_guidance" }
       ]
     },
     {
       "id": 6,
-      "question": "Which type of subjects do you prefer?",
+      "question": {
+        "en": "Which type of subjects do you prefer?",
+        "ur": "آپ کس قسم کے مضامین کو ترجیح دیتے ہیں؟"
+      },
       "options": [
-        { "text": "Mathematics and Engineering subjects", "career_tag": "tech" },
-        { "text": "Biology and Health sciences", "career_tag": "medical" },
-        { "text": "Economics, Accounting, and Management", "career_tag": "business" },
-        { "text": "Literature, History, and Arts", "career_tag": "arts" }
+        { "text": { "en": "Mathematics and Engineering subjects", "ur": "ریاضی اور انجینئرنگ کے مضامین" }, "career_tag": "tech" },
+        { "text": { "en": "Biology and Health sciences", "ur": "حیاتیات اور صحت کے علوم" }, "career_tag": "medical" },
+        { "text": { "en": "Economics, Accounting, and Management", "ur": "معاشیات، اکاؤنٹنگ، اور مینجمنٹ" }, "career_tag": "business" },
+        { "text": { "en": "Literature, History, and Arts", "ur": "ادب، تاریخ، اور فنون" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 7,
-      "question": "When solving a problem, you mostly:",
+      "question": {
+        "en": "When solving a problem, you mostly:",
+        "ur": "مسئلہ حل کرتے وقت آپ عموماً کیا کرتے ہیں؟"
+      },
       "options": [
-        { "text": "Analyze data and find patterns", "career_tag": "tech" },
-        { "text": "Consider people's needs and impact", "career_tag": "medical" },
-        { "text": "Look for strategic and efficient solutions", "career_tag": "business" },
-        { "text": "Think outside the box creatively", "career_tag": "arts" }
+        { "text": { "en": "Analyze data and find patterns", "ur": "ڈیٹا کا تجزیہ اور پیٹرن تلاش کرنا" }, "career_tag": "tech" },
+        { "text": { "en": "Consider people's needs and impact", "ur": "لوگوں کی ضروریات اور اثرات پر غور کرنا" }, "career_tag": "medical" },
+        { "text": { "en": "Look for strategic and efficient solutions", "ur": "حکمت عملی اور موثر حل تلاش کرنا" }, "career_tag": "business" },
+        { "text": { "en": "Think outside the box creatively", "ur": "تخلیقی طور پر نئے انداز سے سوچنا" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 8,
-      "question": "Which activity do you enjoy the most?",
+      "question": {
+        "en": "Which activity do you enjoy the most?",
+        "ur": "آپ کو سب سے زیادہ کون سی سرگرمی پسند ہے؟"
+      },
       "options": [
-        { "text": "Programming or building gadgets", "career_tag": "tech" },
-        { "text": "Volunteering or caring for others", "career_tag": "medical" },
-        { "text": "Running projects or leading teams", "career_tag": "business" },
-        { "text": "Painting, writing, or performing arts", "career_tag": "arts" }
+        { "text": { "en": "Programming or building gadgets", "ur": "پروگرامنگ یا گیجٹس بنانا" }, "career_tag": "tech" },
+        { "text": { "en": "Volunteering or caring for others", "ur": "رضاکارانہ کام یا دوسروں کی دیکھ بھال" }, "career_tag": "medical" },
+        { "text": { "en": "Running projects or leading teams", "ur": "پروجیکٹس چلانا یا ٹیم کی قیادت کرنا" }, "career_tag": "business" },
+        { "text": { "en": "Painting, writing, or performing arts", "ur": "پینٹنگ، تحریر، یا پرفارمنگ آرٹس" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 9,
-      "question": "Logical puzzle: If all cats are animals, and some animals are playful, which is true?",
+      "question": {
+        "en": "Logical puzzle: If all cats are animals, and some animals are playful, which is true?",
+        "ur": "منطقی پہیلی: اگر تمام بلیاں جانور ہیں، اور کچھ جانور کھیل کود پسند کرتے ہیں، تو کون سا درست ہے؟"
+      },
       "options": [
-        { "text": "All cats are playful", "career_tag": "arts" },
-        { "text": "Some cats might be playful", "career_tag": "tech" },
-        { "text": "No cats are playful", "career_tag": "medical" },
-        { "text": "Cannot determine", "career_tag": "business" }
+        { "text": { "en": "All cats are playful", "ur": "تمام بلیاں کھیل کود پسند کرتی ہیں" }, "career_tag": "arts" },
+        { "text": { "en": "Some cats might be playful", "ur": "کچھ بلیاں شاید کھیل کود پسند کریں" }, "career_tag": "tech" },
+        { "text": { "en": "No cats are playful", "ur": "کوئی بلی کھیل کود پسند نہیں کرتی" }, "career_tag": "medical" },
+        { "text": { "en": "Cannot determine", "ur": "تعیین نہیں کیا جا سکتا" }, "career_tag": "business" }
       ]
     },
     {
       "id": 10,
-      "question": "Math puzzle: If 3x + 5 = 20, what is x?",
+      "question": {
+        "en": "Math puzzle: If 3x + 5 = 20, what is x?",
+        "ur": "ریاضی کی پہیلی: اگر 3x + 5 = 20 ہو تو x کیا ہوگا؟"
+      },
       "options": [
-        { "text": "5", "career_tag": "tech" },
-        { "text": "10", "career_tag": "business" },
-        { "text": "15", "career_tag": "medical" },
-        { "text": "Cannot solve", "career_tag": "arts" }
+        { "text": { "en": "5", "ur": "۵" }, "career_tag": "tech" },
+        { "text": { "en": "10", "ur": "۱۰" }, "career_tag": "business" },
+        { "text": { "en": "15", "ur": "۱۵" }, "career_tag": "medical" },
+        { "text": { "en": "Cannot solve", "ur": "حل نہیں کر سکتے" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 11,
-      "question": "Which environment do you prefer for studying?",
+      "question": {
+        "en": "Which environment do you prefer for studying?",
+        "ur": "مطالعے کے لیے آپ کس ماحول کو ترجیح دیتے ہیں؟"
+      },
       "options": [
-        { "text": "Laboratory or computer lab", "career_tag": "tech" },
-        { "text": "Hospital or healthcare setting", "career_tag": "medical" },
-        { "text": "Office or corporate setting", "career_tag": "business" },
-        { "text": "Studio or creative space", "career_tag": "arts" }
+        { "text": { "en": "Laboratory or computer lab", "ur": "لیبارٹری یا کمپیوٹر لیب" }, "career_tag": "tech" },
+        { "text": { "en": "Hospital or healthcare setting", "ur": "ہسپتال یا صحت کا ماحول" }, "career_tag": "medical" },
+        { "text": { "en": "Office or corporate setting", "ur": "دفتر یا کارپوریٹ ماحول" }, "career_tag": "business" },
+        { "text": { "en": "Studio or creative space", "ur": "اسٹوڈیو یا تخلیقی جگہ" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 12,
-      "question": "Do you enjoy working under strict rules or more flexibility?",
+      "question": {
+        "en": "Do you enjoy working under strict rules or more flexibility?",
+        "ur": "کیا آپ سخت قوانین کے تحت کام کرنا پسند کرتے ہیں یا زیادہ لچکدار ماحول؟"
+      },
       "options": [
-        { "text": "Strict rules with defined methods", "career_tag": "tech" },
-        { "text": "Flexible with patient care decisions", "career_tag": "medical" },
-        { "text": "Flexible but target-driven", "career_tag": "business" },
-        { "text": "Flexible with creative freedom", "career_tag": "arts" }
+        { "text": { "en": "Strict rules with defined methods", "ur": "متعین طریقوں کے ساتھ سخت قوانین" }, "career_tag": "tech" },
+        { "text": { "en": "Flexible with patient care decisions", "ur": "صحت کی دیکھ بھال میں فیصلوں میں لچک" }, "career_tag": "medical" },
+        { "text": { "en": "Flexible but target-driven", "ur": "لچکدار مگر مقصد پر مرکوز" }, "career_tag": "business" },
+        { "text": { "en": "Flexible with creative freedom", "ur": "تخلیقی آزادی کے ساتھ لچکدار" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 13,
-      "question": "How do you handle unexpected challenges?",
+      "question": {
+        "en": "How do you handle unexpected challenges?",
+        "ur": "آپ غیر متوقع چیلنجز کو کیسے سنبھالتے ہیں؟"
+      },
       "options": [
-        { "text": "Analyze and troubleshoot logically", "career_tag": "tech" },
-        { "text": "Assess and care for those affected", "career_tag": "medical" },
-        { "text": "Plan strategically to overcome", "career_tag": "business" },
-        { "text": "Think creatively for new solutions", "career_tag": "arts" }
+        { "text": { "en": "Analyze and troubleshoot logically", "ur": "منطقی تجزیہ اور حل نکالنا" }, "career_tag": "tech" },
+        { "text": { "en": "Assess and care for those affected", "ur": "متاثرین کی دیکھ بھال اور اندازہ لگانا" }, "career_tag": "medical" },
+        { "text": { "en": "Plan strategically to overcome", "ur": "حکمت عملی کے ساتھ حل تلاش کرنا" }, "career_tag": "business" },
+        { "text": { "en": "Think creatively for new solutions", "ur": "تخلیقی طور پر نئے حل تلاش کرنا" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 14,
-      "question": "Which type of project excites you most?",
+      "question": {
+        "en": "Which type of project excites you most?",
+        "ur": "آپ کس قسم کے پروجیکٹ میں سب سے زیادہ دلچسپی رکھتے ہیں؟"
+      },
       "options": [
-        { "text": "Developing software or robots", "career_tag": "tech" },
-        { "text": "Medical research or patient care", "career_tag": "medical" },
-        { "text": "Starting a business or managing teams", "career_tag": "business" },
-        { "text": "Creating art, music, or literature", "career_tag": "arts" }
+        { "text": { "en": "Developing software or robots", "ur": "سافٹ ویئر یا روبوٹ تیار کرنا" }, "career_tag": "tech" },
+        { "text": { "en": "Medical research or patient care", "ur": "طبی تحقیق یا مریضوں کی دیکھ بھال" }, "career_tag": "medical" },
+        { "text": { "en": "Starting a business or managing teams", "ur": "کاروبار شروع کرنا یا ٹیم کی قیادت کرنا" }, "career_tag": "business" },
+        { "text": { "en": "Creating art, music, or literature", "ur": "فن، موسیقی، یا ادب تخلیق کرنا" }, "career_tag": "arts" }
       ]
     },
     {
       "id": 15,
-      "question": "Do you enjoy analyzing patterns and numbers?",
+      "question": {
+        "en": "Do you enjoy analyzing patterns and numbers?",
+        "ur": "کیا آپ پیٹرنز اور اعداد و شمار کا تجزیہ کرنا پسند کرتے ہیں؟"
+      },
       "options": [
-        { "text": "Yes, very much", "career_tag": "tech" },
-        { "text": "Yes, if related to health or biology", "career_tag": "medical" },
-        { "text": "Yes, for business or finance", "career_tag": "business" },
-        { "text": "No, prefer creative expression", "career_tag": "arts" }
+        { "text": { "en": "Yes, very much", "ur": "جی ہاں، بہت پسند ہے" }, "career_tag": "tech" },
+        { "text": { "en": "Yes, if related to health or biology", "ur": "جی ہاں، اگر صحت یا حیاتیات سے متعلق ہو" }, "career_tag": "medical" },
+        { "text": { "en": "Yes, for business or finance", "ur": "جی ہاں، کاروبار یا مالیات کے لیے" }, "career_tag": "business" },
+        { "text": { "en": "No, prefer creative expression", "ur": "نہیں، تخلیقی اظہار کو ترجیح دیتا ہوں" }, "career_tag": "arts" }
       ]
     }
   ]
