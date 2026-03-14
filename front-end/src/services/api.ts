@@ -60,13 +60,23 @@ export interface QuizSubmissionRequest {
 
 /* ===================== RECOMMENDATION ===================== */
 
+export interface Scholarship {
+  name: string
+  provider: string
+  eligibility: string
+  link: string
+}
+
+
 export interface Recommendation {
   career: string;
   confidence: number;
   degree_programs: string[];
   universities: string[];
+  scholarships: Scholarship[]
   explanation: string;
 }
+
 
 /* ===================== API CALLS ===================== */
 

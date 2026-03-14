@@ -201,6 +201,47 @@ const RecommendationPage = () => {
             ))}
           </ul>
         </div>
+      <h2 className="text-xl font-bold mt-6">Scholarships & Financial Aid</h2>
+  {/* Scholarships */}
+<div className="bg-white p-8 rounded-lg shadow-lg">
+  <div className="flex items-center mb-4">
+    <Award className="w-7 h-7 text-purple-600 mr-3" />
+    <h3 className="text-2xl font-bold">
+      {language === 'en'
+        ? 'Scholarships & Financial Aid'
+        : 'اسکالرشپس اور مالی امداد'}
+    </h3>
+  </div>
+
+  <ul className="space-y-4">
+    {recommendation.scholarships.map((s, i) => (
+      <li
+        key={i}
+        className="bg-purple-50 p-4 rounded-lg border border-purple-100 hover:shadow-md transition"
+      >
+        <p className="font-semibold text-lg text-gray-800">{s.name}</p>
+
+        <p className="text-gray-600 text-sm mt-1">
+          <span className="font-medium">Provider:</span> {s.provider}
+        </p>
+
+        <p className="text-gray-600 text-sm mt-1">
+          <span className="font-medium">Eligibility:</span> {s.eligibility}
+        </p>
+
+        <a
+          href={s.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-3 text-purple-600 font-medium hover:underline"
+        >
+          Learn More →
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
         {/* Retake */}
         <div className="bg-white p-6 rounded-lg shadow text-center">

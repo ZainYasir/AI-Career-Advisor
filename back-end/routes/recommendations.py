@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # File paths
 UNIVERSITY_FILE = BASE_DIR / "data" / "universities.json"
+SCHOLARSHIP_FILE = BASE_DIR / "data" / "scholarships.json"
 RESULT_FILE = BASE_DIR / "data" / "result.json"
 MODEL_FILE = BASE_DIR / "ml" / "model.pkl"
 NLP_FILE = BASE_DIR / "ml" / "nlp.py"
@@ -26,7 +27,9 @@ spec.loader.exec_module(nlp)
 # Load JSON data
 with open(UNIVERSITY_FILE, "r") as f:
     universities = json.load(f)
-
+    
+with open(SCHOLARSHIP_FILE, "r") as f:
+    scholarships = json.load(f)
 # Load ML model
 model = joblib.load(MODEL_FILE) if MODEL_FILE.exists() else None
 
@@ -40,6 +43,8 @@ def get_recommendation(language: str = Query("en")):
 
     career_tag = result.get("career_tag")
     confidence = result.get("confidence", 0.5)
+    career_scholarships = scholarships.get(career_tag, [])
+
 
     career_data = universities.get(career_tag)
     if not career_data:
@@ -71,5 +76,6 @@ def get_recommendation(language: str = Query("en")):
         "confidence": confidence,
         "degree_programs": career_data["degrees"],
         "universities": career_data["universities"],
+        "scholarships": career_scholarships,
         "explanation": full_explanation
     }

@@ -1,0 +1,40 @@
+{
+  "tech": [
+    {
+      "name": "HEC Need Based Scholarship",
+      "provider": "HEC Pakistan",
+      "eligibility": "Low income students enrolled in BS programs",
+      "link": "https://hec.gov.pk"
+    },
+    {
+      "name": "Ehsaas Undergraduate Scholarship",
+      "provider": "Government of Pakistan",
+      "eligibility": "Students with financial need in public universities",
+      "link": "https://ehsaas.hec.gov.pk"
+    }
+  ],
+  "business": [
+    {
+      "name": "PEEF Scholarship",
+      "provider": "Punjab Educational Endowment Fund",
+      "eligibility": "Punjab students with good academic record",
+      "link": "https://peef.org.pk"
+    }
+  ],
+  "medical": [
+    {
+      "name": "HEC Medical Scholarship",
+      "provider": "HEC Pakistan",
+      "eligibility": "Students enrolled in medical programs",
+      "link": "https://hec.gov.pk"
+    }
+  ],
+  "arts": [
+    {
+      "name": "Punjab Talent Scholarship",
+      "provider": "Government of Punjab",
+      "eligibility": "Students pursuing arts or humanities",
+      "link": "https://punjab.gov.pk"
+    }
+  ]
+}
